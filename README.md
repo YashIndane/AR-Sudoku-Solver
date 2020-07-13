@@ -14,5 +14,9 @@ Installation
 
 `pip install opencv-python`
 
+By this method we are capturing 23 by 23 size grayscale images. There are 529 features, upon which the classifier will be trained.
+
+Sample training images - ![](Dataset/digit-6/12.png) ![](Dataset/digit-1/11.png) ![](Dataset/digit-2/8.png)
+
 
 
