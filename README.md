@@ -23,7 +23,7 @@ with 530 coloumns is then used by model builder , which makes a random forest cl
 
 ### What is Random Forest Classification?
 
-![](Ideas/a.png) ![](Ideas/forest2.png)
+![](Ideas/a.png)     ![](Ideas/forest2.png)
 
 A Random Forest Classifier is a set of decision trees which randomly select subset of training set. The final decision comes from the aggregation of votes 
 from all the trees. It has been implemented with the scikit-learn library. 
