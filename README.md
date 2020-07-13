@@ -54,6 +54,7 @@ One of the fastest solves in 23 msecs!
 
 ## Resources
 For getting the sudoku puzzles go to  - http://www.websudoku.com/
+
 For getting solution of puzzles go to - https://sudokusolver.net/
 
 
