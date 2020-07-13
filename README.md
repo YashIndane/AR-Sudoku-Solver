@@ -19,19 +19,30 @@ By this method we are capturing 23 by 23 size grayscale images. There are 529 fe
 Sample training images - ![](Dataset/digit-6/12.png) ![](Dataset/digit-1/11.png) ![](Dataset/digit-2/8.png)
 
 Total 1600 images of numbers from 0-9 are then fed to the dataset generator program which generates the required `.csv` file. The generated file
-with 530 coloumns is then used by model builder , which makes a random forest classifier.
+with 530 coloumns is then used by model builder , which makes a random forest classifier. Accurracy acheived on test data is around 98%.
 
 ### What is Random Forest Classification?
 
 ![](Ideas/a.png) ![](Ideas/forest2.png)
 
 A Random Forest Classifier is a set of decision trees which randomly select subset of training set. The final decision comes from the aggregation of votes 
-from all the trees.
+from all the trees. It has been implemented with the scikit-learn library. 
 
 ### Note-
 (optional) For shuffling up the csv file we can do this after reading the file- 
 
 `data = data.sample(frac = 1).reset_index(drop = True)`
+
+## Grabbing the digits from the grid
+
+Countours are been used to detect polygons present in the live video. They later are been filtered out on the basis of countour-area and no. of sides.
+
+
+
+
+
+
+
 
 
 
