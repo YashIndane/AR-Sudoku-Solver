@@ -5,7 +5,7 @@
 
 A augmented reality sudoku solver using random forest classifier and backtracking algorithm
 
-# Description
+## Description
 1.Building the dataset
 
 For building the dataset the same program is used which is used for capturing the square grids during solving.
@@ -21,7 +21,19 @@ Sample training images - ![](Dataset/digit-6/12.png) ![](Dataset/digit-1/11.png)
 Total 1600 images of numbers from 0-9 are then fed to the dataset generator program which generates the required `.csv` file. The generated file
 with 530 coloumns is then used by model builder , which makes a random forest classifier.
 
-# What is Random Forest Classification?
+### What is Random Forest Classification?
+
+![](Ideas/a.png) ![](Ideas/forest2.png)
+
+A Random Forest Classifier is a set of decision trees which randomly select subset of training set. The final decision comes from the aggregation of votes 
+from all the trees.
+
+### Note-
+(optional) For shuffling up the csv file we can do this after reading the file- 
+
+`data = data.sample(frac = 1).reset_index(drop = True)`
+
+
 
 
 
