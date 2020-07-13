@@ -37,6 +37,17 @@ from all the trees. It has been implemented with the scikit-learn library.
 
 Countours are been used to detect polygons present in the live video. They later are been filtered out on the basis of countour-area and no. of sides.
 
+![](Ideas/detection1.png)
+
+The extracted digits are then predicted using our pre-trained ML model , and the whole numbers are sent to the sudoku solver which solves it with efficient backtracking
+algorithm.
+
+## Solving 
+
+
+
+
+
 
 
 
