@@ -18,5 +18,11 @@ By this method we are capturing 23 by 23 size grayscale images. There are 529 fe
 
 Sample training images - ![](Dataset/digit-6/12.png) ![](Dataset/digit-1/11.png) ![](Dataset/digit-2/8.png)
 
+Total 1600 images of numbers from 0-9 are then fed to the dataset generator program which generates the required `.csv` file. The generated file
+with 530 coloumns is then used by model builder , which makes a random forest classifier.
+
+# What is Random Forest Classification?
+
+
 
 
