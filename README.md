@@ -48,9 +48,9 @@ Backtracking algorithm - Backtracking is an algorithmic-technique for solving pr
 
 ![](Ideas/ss1.png)
 
-One of the fastest solves in 23 msecs!
+One of the fastest solves in 16 msecs!
 
-![](Ideas/solved_image.png)
+![](Ideas/fastest_solve.png)
 
 ## Resources
 For getting the sudoku puzzles go to  - http://www.websudoku.com/
