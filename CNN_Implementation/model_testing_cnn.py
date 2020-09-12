@@ -14,7 +14,7 @@ def generate_grid() -> list :
 
     for p in range(1 , 82) :
         
-        img_addr = f'sample{p}.png'
+        img_addr = f'IMAGE_PATH'
         input_image = image.load_img(img_addr , target_size = (23 ,23))
         input_image = image.img_to_array(input_image)
         input_image = np.expand_dims(input_image , axis = 0)
