@@ -11,7 +11,7 @@ train_datagen = ImageDataGenerator(
                 validation_split = 0.05)
 
 training_set = train_datagen.flow_from_directory(
-               'DIGITSALL',
+               'PATH',
                target_size = (23,23),
                batch_size =8,
                subset = 'training', 
@@ -20,7 +20,7 @@ training_set = train_datagen.flow_from_directory(
 #preprocessing dataset
 test_datagen = ImageDataGenerator(rescale = 1./255) 
 test_set = test_datagen.flow_from_directory(
-           'DIGITSALL',
+           'PATH',
            target_size = (23,23),
            batch_size = 8,
            subset = 'validation',
