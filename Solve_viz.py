@@ -14,13 +14,13 @@ problem = [[6 , 7 , 0 , 0 , 0 , 0 , 0 , 0 , 2],
            [5 , 0 , 0 , 0 , 0 , 0 , 0 , 9 , 6]]
 
 
-
 np_problem = np.array(problem)
 
 pygame.init()
 screen = pygame.display.set_mode((440 , 440))
 
 image = pygame.image.load('grid.gif')
+image_fill = pygame.image.load('fill.gif')
 font = pygame.font.SysFont("calibri",30)
 
 coordinates = []
@@ -51,21 +51,11 @@ while sta :
         coordinates.append(temp_co)
 
       
-
-
-
-
     for event in pygame.event.get() : 
          
          if event.type == pygame.QUIT : sys.exit()
 
     
-    #pygame.display.update()
-
-
-    
-
-
     fixed_coordinates = [] # first getting the coordinates where fixed numbers are present
     empty_coordinates = []
     for i , sub_array in enumerate(problem) : 
@@ -106,20 +96,28 @@ while sta :
                     
                     if all([num not in np_problem[l_b_r : u_b_r , l_b_c : u_b_c] , num not in np_problem[r , :] , num not in np_problem[: , c]]) : 
                       if num not in avoid_dict.get(empty_coordinates.index([n_r , n_c])) :         
-                            np_problem[n_r , n_c] , fix_flag = num , True   ########################
+                            np_problem[n_r , n_c] , fix_flag = num , True  
 
-                            label_n1=font.render(str(num),2,(255,20,200))
+                            screen.blit(image_fill ,  coordinates[n_r][n_c])
+                            pygame.display.update()
+
+                            label_n1=font.render(str(num),2,(0,0,200))
                             screen.blit(label_n1 , coordinates[n_r][n_c])
                             pygame.display.update()
 
-                            #time.sleep(0.2)
+                            time.sleep(0.05)
 
                             break
                             
             if fix_flag : n_r , n_c = empty_coordinates[empty_coordinates.index([n_r , n_c]) + 1] 
                     
             if not fix_flag : 
-                np_problem[n_r , n_c] = 0 ###############################put here white image
+                np_problem[n_r , n_c] = 0 
+
+                screen.blit(image_fill ,  coordinates[n_r][n_c])
+                pygame.display.update()
+                time.sleep(0.05)
+
                 avoid_dict[empty_coordinates.index([n_r , n_c])].clear()
                 n_r , n_c = empty_coordinates[empty_coordinates.index([n_r , n_c]) - 1]
                 
@@ -137,14 +135,13 @@ while sta :
 
                 if all([num not in np_problem[l_b_r : u_b_r , l_b_c : u_b_c] , num not in np_problem[r , :] , num not in np_problem[: , c]]) : 
                         
-                    np_problem[r , c] , fix_flag = num , True  #########################
+                    np_problem[r , c] , fix_flag = num , True  
 
-                    label_n=font.render(str(num),2,(255,20,200))
+                    label_n=font.render(str(num),2,(0,0,200))
                     screen.blit(label_n , coordinates[r][c])
                     pygame.display.update()
 
-                    #time.sleep(0.01)
-
+                    time.sleep(0.05)
 
                     break
 
@@ -152,7 +149,7 @@ while sta :
     
     x = input()  #just to hold window from closing
             
-    #print(np_problem)
+    
 
 
 
