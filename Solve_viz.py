@@ -3,21 +3,23 @@ import pygame
 import sys
 import time
 
-problem = [[6 , 7 , 0 , 0 , 0 , 0 , 0 , 0 , 2],
-           [0 , 0 , 1 , 7 , 9 , 0 , 0 , 3 , 0],
-           [0 , 5 , 0 , 0 , 6 , 2 , 0 , 0 , 0],
-           [0 , 0 , 0 , 0 , 0 , 0 , 0 , 2 , 5],
-           [0 , 0 , 0 , 3 , 0 , 8 , 0 , 0 , 0],
-           [2 , 4 , 0 , 0 , 0 , 0 , 0 , 0 , 0],
-           [0 , 0 , 0 , 1 , 3 , 0 , 0 , 5 , 0],
-           [0 , 8 , 0 , 0 , 5 , 7 , 1 , 0 , 0],
-           [5 , 0 , 0 , 0 , 0 , 0 , 0 , 9 , 6]]
+problem = [[0 , 2 , 4 , 0 , 0 , 6 , 0 , 0 , 8],
+           [6 , 0 , 9 , 0 , 2 , 0 , 0 , 1 , 0],
+           [5 , 7 , 0 , 0 , 0 , 0 , 0 , 0 , 0],
+           [0 , 0 , 6 , 9 , 0 , 8 , 0 , 0 , 1],
+           [0 , 8 , 1 , 0 , 0 , 0 , 6 , 5 , 0],
+           [7 , 0 , 0 , 3 , 0 , 1 , 8 , 0 , 0],
+           [0 , 0 , 0 , 0 , 0 , 0 , 0 , 8 , 2],
+           [0 , 9 , 0 , 0 , 8 , 0 , 1 , 0 , 4],
+           [8 , 0 , 0 , 2 , 0 , 0 , 5 , 9 , 0]]
 
 
 np_problem = np.array(problem)
 
 pygame.init()
 screen = pygame.display.set_mode((440 , 440))
+pygame.display.set_caption('Sudoku Vizualizer')
+animation_time = 0.20
 
 image = pygame.image.load('grid.gif')
 image_fill = pygame.image.load('fill.gif')
@@ -105,7 +107,7 @@ while sta :
                             screen.blit(label_n1 , coordinates[n_r][n_c])
                             pygame.display.update()
 
-                            time.sleep(0.05)
+                            time.sleep(animation_time)
 
                             break
                             
@@ -116,7 +118,7 @@ while sta :
 
                 screen.blit(image_fill ,  coordinates[n_r][n_c])
                 pygame.display.update()
-                time.sleep(0.05)
+                time.sleep(animation_time)
 
                 avoid_dict[empty_coordinates.index([n_r , n_c])].clear()
                 n_r , n_c = empty_coordinates[empty_coordinates.index([n_r , n_c]) - 1]
@@ -141,7 +143,7 @@ while sta :
                     screen.blit(label_n , coordinates[r][c])
                     pygame.display.update()
 
-                    time.sleep(0.05)
+                    time.sleep(animation_time)
 
                     break
 
