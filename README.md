@@ -54,7 +54,7 @@ One of the fastest solves in 16 msecs!
 
 ## Sudoku Solving Vizualizer
 
-![](Ideas/su_viz.png)
+![](sudoku.gif)
 
 ## Resources
 For getting the sudoku puzzles go to  - http://www.websudoku.com/
