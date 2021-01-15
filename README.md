@@ -4,6 +4,7 @@
 ![](https://img.shields.io/badge/license-MIT-lightgrey)
 
 A augmented reality sudoku solver using random forest classifier and backtracking algorithm
+
 Link to demo -> [demo](https://www.linkedin.com/posts/yash-indane-aa6534179_python3-opencv-machinelearning-activity-6689535809860730880-TBgS)
 
 ## Description
