@@ -7,6 +7,8 @@ A augmented reality sudoku solver using random forest classifier and backtrackin
 
 Link to demo -> [demo](https://www.linkedin.com/posts/yash-indane-aa6534179_python3-opencv-machinelearning-activity-6689535809860730880-TBgS)
 
+![](sudoku-g.gif)
+
 ## Description
 1.Building the dataset
 
