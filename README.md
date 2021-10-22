@@ -16,7 +16,7 @@ For building the dataset the same program is used which is used for capturing th
 
 Installation
 
-`pip install opencv-python`
+`$ pip install opencv-python`
 
 By this method we are capturing 23 by 23 size grayscale images. There are 529 features, upon which the classifier will be trained.
 
