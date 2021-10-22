@@ -36,7 +36,7 @@ from all the trees. It has been implemented with the scikit-learn library.
 (optional) For shuffling up the csv file we can do this after reading the file- 
 
 ```py
-data = data.sample(frac = 1).reset_index(drop = True)
+data = data.sample(frac=1).reset_index(drop=True)
 ```
 
 ## Grabbing the digits from the grid
